@@ -27,7 +27,7 @@ node {
     // JWT key credentials.
     // -------------------------------------------------------------------------
 
-    //	withEnv(["HOME=${env.WORKSPACE}"]) {	
+    	withEnv(["HOME=${env.WORKSPACE}"]) {	
 	
 	    withCredentials([file(credentialsId: SERVER_KEY_CREDENTIALS_ID, variable: 'server_key_file')]) {
 		// -------------------------------------------------------------------------
@@ -66,7 +66,7 @@ node {
 		//}
 	    }
 	}
-//}
+}
 
 def command(script) {
     if (isUnix()) {
